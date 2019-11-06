@@ -1,9 +1,9 @@
 import os
 import tensorflow as tf
 # Tensorflow logging level
-from logging import WARNING  # import  DEBUG, INFO, ERROR for more/less verbosity
+#from logging import WARNING  # import  DEBUG, INFO, ERROR for more/less verbosity
 
-tf.logging.set_verbosity(WARNING)
+#tf.logging.set_verbosity(WARNING)
 from dh_segment import estimator_fn, utils
 from dh_segment.io import input
 import json
