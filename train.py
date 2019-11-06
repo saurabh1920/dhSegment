@@ -24,12 +24,12 @@ ex = Experiment('dhSegment_experiment')
 
 @ex.config
 def default_config():
-    train_data = None  # Directory with training data
-    eval_data = None  # Directory with validation data
-    model_output_dir = None  # Directory to output tf model
-    restore_model = False  # Set to true to continue training
-    classes_file = None  # txt file with classes values (unused for REGRESSION)
-    gpu = ''  # GPU to be used for training
+    train_data = "demo/pages/train/"  # Directory with training data
+    eval_data = "demo/pages/val_a1"  # Directory with validation data
+    model_output_dir = "demo/page_model"  # Directory to output tf model
+    restore_model = True  # Set to true to continue training
+    classes_file = "demo/pages/classes.txt"  # txt file with classes values (unusedfor REGRESSION)
+    gpu = '0'  # GPU to be used for training
     prediction_type = utils.PredictionType.CLASSIFICATION  # One of CLASSIFICATION, REGRESSION or MULTILABEL
     pretrained_model_name = 'resnet50'
     model_params = utils.ModelParams(pretrained_model_name=pretrained_model_name).to_dict()  # Model parameters
